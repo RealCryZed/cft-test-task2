@@ -1,15 +1,18 @@
 package techshop.Model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
-public class HardDrive extends Product {
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class HardDrive {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int harddrive_id;
-    private int capacity;
+    private Integer id;
+    private Integer capacity;
 }

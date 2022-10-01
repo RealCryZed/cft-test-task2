@@ -1,15 +1,18 @@
 package techshop.Model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
-public class Notebook extends Product {
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class Notebook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int notebook_id;
-    private int size;
+    private Integer id;
+    private Integer size;
 }

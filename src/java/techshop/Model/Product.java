@@ -1,12 +1,27 @@
 package techshop.Model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 @Data
-public abstract class Product {
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class Product {
 
-    private int serialNumber;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer product_id;
+
+    private String typeOfProduct;
+
+    private Integer serialNumber;
     private String manufacturer;
-    private int price;
-    private int inStock;
+    private Integer price;
+    private Integer inStock;
+
+    private String additionalInfo;
 }

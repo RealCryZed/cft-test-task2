@@ -1,15 +1,18 @@
 package techshop.Model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
-public class Monitor extends Desktop {
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class Monitor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int monitor_id;
-    private int diagonal;
+    private Integer id;
+    private Integer diagonal;
 }

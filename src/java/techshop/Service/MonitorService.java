@@ -10,7 +10,7 @@ public class MonitorService {
     @Autowired
     private MonitorRepo monitorRepo;
 
-    public void saveMonitor(Monitor monitor) {
-        monitorRepo.save(monitor);
+    public Monitor saveMonitor(Monitor monitor) {
+        return monitorRepo.save(monitor);
     }
 }

@@ -10,7 +10,7 @@ public class HardDriveService {
     @Autowired
     private HardDriveRepo hardDriveRepo;
 
-    public void saveHardDrive(HardDrive hardDrive) {
-        hardDriveRepo.save(hardDrive);
+    public HardDrive saveHardDrive(HardDrive hardDrive) {
+        return hardDriveRepo.save(hardDrive);
     }
 }

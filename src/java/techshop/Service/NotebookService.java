@@ -10,7 +10,7 @@ public class NotebookService {
     @Autowired
     private NotebookRepo notebookRepo;
 
-    public void saveNotebook(Notebook notebook) {
-        notebookRepo.save(notebook);
+    public Notebook saveNotebook(Notebook notebook) {
+        return notebookRepo.save(notebook);
     }
 }

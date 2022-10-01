@@ -1,10 +1,12 @@
 package techshop.Repo;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import techshop.Model.Desktop;
 
-@Repository
-public interface DesktopRepo extends CrudRepository<Desktop, Integer> {
+import java.util.List;
 
+@Repository
+public interface DesktopRepo extends JpaRepository<Desktop, Integer> {
+    List<Desktop> findAll();
 }

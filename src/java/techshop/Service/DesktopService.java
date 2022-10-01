@@ -5,12 +5,18 @@ import org.springframework.stereotype.Service;
 import techshop.Model.Desktop;
 import techshop.Repo.DesktopRepo;
 
+import java.util.List;
+
 @Service
 public class DesktopService {
     @Autowired
     private DesktopRepo desktopRepo;
 
-    public void saveDesktop(Desktop desktop) {
-        desktopRepo.save(desktop);
+    public Desktop saveDesktop(Desktop desktop) {
+        return desktopRepo.save(desktop);
+    }
+
+    public List<Desktop> getAll() {
+        return desktopRepo.findAll();
     }
 }
