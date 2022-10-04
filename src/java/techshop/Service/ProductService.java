@@ -29,7 +29,7 @@ public class ProductService {
     }
 
     public List<Product> getAllProductsByType(String type) {
-        return productRepo.findAllByTypeOfProduct(type);
+        return productRepo.findAllByTypeOfProductIgnoreCase(type);
     }
 
     public List<Product> getProductsBySerialNumber(Integer serialNumber) {
