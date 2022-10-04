@@ -10,7 +10,6 @@ import java.util.List;
 public interface ProductRepo extends JpaRepository<Product, Integer> {
 
     List<Product> findAllByTypeOfProductIgnoreCase(String type);
-    List<Product> findAllBySerialNumber(Integer serialNumber);
 
     Product findProductBySerialNumber(Integer serialNumber);
 }

@@ -32,10 +32,6 @@ public class ProductService {
         return productRepo.findAllByTypeOfProductIgnoreCase(type);
     }
 
-    public List<Product> getProductsBySerialNumber(Integer serialNumber) {
-        return productRepo.findAllBySerialNumber(serialNumber);
-    }
-
     public Product getProductById(Integer product_id) {
         return productRepo.getById(product_id);
     }

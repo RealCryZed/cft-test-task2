@@ -28,8 +28,8 @@ public class MainController {
 
     @GetMapping("/product/{serialNumber}")
     @ResponseBody
-    public List<Product> getProductBySerialNumber(@PathVariable Integer serialNumber) {
-        return productService.getProductsBySerialNumber(serialNumber);
+    public Product getProductBySerialNumber(@PathVariable Integer serialNumber) {
+        return productService.getProductBySerialNumber(serialNumber);
     }
 
     @PostMapping("/edit")
