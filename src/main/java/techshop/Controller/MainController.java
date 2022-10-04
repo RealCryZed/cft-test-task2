@@ -35,7 +35,7 @@ public class MainController {
     @PostMapping("/edit")
     @ResponseBody
     public Product editProduct(@RequestBody Product product) {
-        Product tempProduct = productService.getProductById(product.getProduct_id());
+        Product tempProduct = productService.getProductBySerialNumber(product.getSerialNumber());
         tempProduct.setTypeOfProduct(product.getTypeOfProduct());
         tempProduct.setSerialNumber(product.getSerialNumber());
         tempProduct.setPrice(product.getPrice());
