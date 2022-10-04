@@ -13,11 +13,12 @@ import javax.persistence.*;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer product_id;
 
     private String typeOfProduct;
 
+    @Column(unique = true)
     private Integer serialNumber;
     private String manufacturer;
     private Integer price;

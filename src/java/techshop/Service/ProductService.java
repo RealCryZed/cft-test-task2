@@ -17,11 +17,27 @@ public class ProductService {
         return productRepo.save(product);
     }
 
+    public void deleteProduct(Product product) {
+        productRepo.delete(product);
+    }
+
+    public List<Product> getAllProduct() {
+        return productRepo.findAll();
+    }
+
     public List<Product> getAllProductsByType(String type) {
         return productRepo.findAllByTypeOfProduct(type);
     }
 
-    public List<Product> getProductBySerialNumber(Integer serialNumber) {
+    public List<Product> getProductsBySerialNumber(Integer serialNumber) {
         return productRepo.findAllBySerialNumber(serialNumber);
+    }
+
+    public Product getProductById(Integer product_id) {
+        return productRepo.getById(product_id);
+    }
+
+    public Product getProductBySerialNumber(Integer serialNumber) {
+        return productRepo.findProductBySerialNumber(serialNumber);
     }
 }
